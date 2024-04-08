@@ -4,6 +4,16 @@
   justify-content: center;
 }
 
+.submitted {
+  display: flex;
+  justify-content: center;
+}
+
+.emailError,
+.countryError {
+  color: red;
+}
+
 label {
   margin-right: 10px;
 }

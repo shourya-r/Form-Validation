@@ -19,28 +19,48 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <form action="">
+    <form novalidate>
       <div class="wrapper-div">
         <label for="email">Enter your email address</label>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email" required />
+        <span class="emailError" aria-live="polite"></span>
       </div>
       <div class="wrapper-div">
         <label for="country">Enter your country of residence</label>
-        <input type="text" id="country" />
+        <input type="text" id="country" required minlength="2" maxlength="3" />
+        <span class="countryError" aria-live="polite"></span>
       </div>
       <div class="wrapper-div">
         <label for="zipcode">Enter your zipcode</label>
-        <input type="text" id="zipcode" name="zipcode" />
+        <input
+          type="number"
+          id="zipcode"
+          name="zipcode"
+          required
+          maxlength="6"
+        />
+        <span class="zipcodeError" aria-live="polite"></span>
       </div>
       <div class="wrapper-div">
         <label for="password">Enter your password</label>
-        <input type="password" id="password" name="password" />
+        <input type="password" id="password" name="password" required />
+        <span class="passwordError" aria-live="polite"></span>
       </div>
       <div class="wrapper-div">
         <label for="password">Confirm your password</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" />
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <span class="confirmPasswordError" aria-live="polite"></span>
+      </div>
+      <div class="wrapper-div">
+        <button>Submit</button>
       </div>
     </form>
+    <div class="submitted"></div>
     <script src="" async defer></script>
   </body>
 </html>
