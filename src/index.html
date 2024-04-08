@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Form Validation</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
@@ -33,10 +33,11 @@
       <div class="wrapper-div">
         <label for="zipcode">Enter your zipcode</label>
         <input
-          type="number"
+          type="text"
           id="zipcode"
           name="zipcode"
           required
+          minlength="6"
           maxlength="6"
         />
         <span class="zipcodeError" aria-live="polite"></span>
@@ -46,6 +47,15 @@
         <input type="password" id="password" name="password" required />
         <span class="passwordError" aria-live="polite"></span>
       </div>
+      <div class="wrapper-div">Your password must contain the following</div>
+      <div class="wrapper-div">
+        <ol>
+          <li id="letter" class="invalid">A lowercase letter</li>
+          <li id="capital" class="invalid">An uppercase letter</li>
+          <li id="number" class="invalid">A number</li>
+          <li id="length" class="invalid">Minimum 8 characters</li>
+        </ol>
+      </div>
       <div class="wrapper-div">
         <label for="password">Confirm your password</label>
         <input
@@ -53,6 +63,7 @@
           id="confirmPassword"
           name="confirmPassword"
           required
+          minlength="8"
         />
         <span class="confirmPasswordError" aria-live="polite"></span>
       </div>

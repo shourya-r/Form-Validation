@@ -10,10 +10,17 @@
 }
 
 .emailError,
-.countryError {
+.countryError,
+.zipcodeError,
+.passwordError,
+.confirmPasswordError,
+.invalid {
   color: red;
 }
 
+.valid {
+  color: rgb(75, 180, 75);
+}
 label {
   margin-right: 10px;
 }
